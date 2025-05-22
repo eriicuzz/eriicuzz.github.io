@@ -2,136 +2,136 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Educazione Civica - Menu Interattivo</title>
+  <title>Educazione Civica</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      display: flex;
-    }
-
-    .sidebar {
-      width: 250px;
-      background-color: #f1f1f1;
-      height: 100vh;
-      overflow-y: auto;
-      padding: 20px;
+    * {
       box-sizing: border-box;
     }
 
-    .content {
-      flex: 1;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Menu laterale */
+    .sidebar {
+      width: 250px;
+      background-color: #f1f1f1;
       padding: 20px;
+      overflow-y: auto;
+      border-right: 2px solid #ccc;
     }
 
-    /* Menu voce e checkbox nascosto */
-    .voce {
-      margin-bottom: 10px;
-    }
-
-    .voce input[type="checkbox"] {
-      display: none;
-    }
-
-    .voce label {
+    .sidebar a {
       display: block;
+      padding: 12px;
+      margin-bottom: 8px;
       background-color: #e0e0e0;
-      padding: 10px;
-      cursor: pointer;
+      text-decoration: none;
+      color: #000;
       border-radius: 4px;
     }
 
-    .voce label:hover {
-      background-color: #ccc;
+    .sidebar a:hover {
+      background-color: #bbb;
     }
 
-    .voce .testo {
+    /* Sezione principale */
+    .main {
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    .section {
       display: none;
-      padding: 10px;
-      background-color: #fff;
-      border-left: 4px solid #ccc;
-      margin-top: 5px;
     }
 
-    /* Mostra contenuto solo se la checkbox è attivata */
-    .voce input:checked ~ .testo {
+    /* Mostra la sezione con :target */
+    .section:target {
       display: block;
+    }
+
+    /* Mostra un messaggio iniziale se nessuna sezione è selezionata */
+    .section.default {
+      display: block;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .section p {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-left: 4px solid #ccc;
     }
   </style>
 </head>
 <body>
 
+  <!-- MENU LATERALE -->
   <div class="sidebar">
-    <h2>Menu Educazione Civica</h2>
-
-    <div class="voce">
-      <input type="checkbox" id="economia">
-      <label for="economia">Economia Circolare</label>
-      <div class="testo">
-        L’economia circolare riduce i rifiuti e riutilizza risorse per creare un sistema sostenibile.
-      </div>
-    </div>
-
-    <div class="voce">
-      <input type="checkbox" id="principi">
-      <label for="principi">Principi Fondamentali</label>
-      <div class="testo">
-        I principi fondamentali della Costituzione italiana stabiliscono i valori di libertà, uguaglianza e solidarietà.
-      </div>
-    </div>
-
-    <div class="voce">
-      <input type="checkbox" id="benefici">
-      <label for="benefici">Benefici</label>
-      <div class="testo">
-        Benefici includono un ambiente più pulito, maggiore risparmio economico e qualità della vita migliorata.
-      </div>
-    </div>
-
-    <div class="voce">
-      <input type="checkbox" id="esempi">
-      <label for="esempi">Esempi</label>
-      <div class="testo">
-        Esempi di economia circolare sono: riciclo della plastica, compostaggio e riutilizzo di oggetti.
-      </div>
-    </div>
-
-    <div class="voce">
-      <input type="checkbox" id="sfide">
-      <label for="sfide">Sfide</label>
-      <div class="testo">
-        Le sfide principali includono innovazione tecnologica, cambiamento culturale e collaborazione istituzionale.
-      </div>
-    </div>
-
-    <div class="voce">
-      <input type="checkbox" id="ue">
-      <label for="ue">Piano dell’UE</label>
-      <div class="testo">
-        L’Unione Europea ha adottato un piano per promuovere sostenibilità e ridurre le emissioni entro il 2050.
-      </div>
-    </div>
-
-    <div class="voce">
-      <input type="checkbox" id="italia">
-      <label for="italia">Piano dell’Italia</label>
-      <div class="testo">
-        Il Piano Nazionale di Ripresa e Resilienza sostiene la transizione ecologica e digitale in Italia.
-      </div>
-    </div>
-
-    <div class="voce">
-      <input type="checkbox" id="futuro">
-      <label for="futuro">Futuro</label>
-      <div class="testo">
-        Il futuro dipende da scelte responsabili di governi, aziende e cittadini verso la sostenibilità.
-      </div>
-    </div>
+    <h3>Educazione Civica</h3>
+    <a href="#economia">Economia Circolare</a>
+    <a href="#principi">Principi Fondamentali</a>
+    <a href="#benefici">Benefici</a>
+    <a href="#esempi">Esempi</a>
+    <a href="#sfide">Sfide</a>
+    <a href="#ue">Piano dell’UE</a>
+    <a href="#italia">Piano dell’Italia</a>
+    <a href="#futuro">Futuro</a>
   </div>
 
-  <div class="content">
-    <h1>Benvenuto nel sito di Educazione Civica</h1>
-    <p>Seleziona un argomento dal menu a sinistra per leggere la spiegazione.</p>
+  <!-- CONTENUTO DINAMICO -->
+  <div class="main">
+    <div class="section default">
+      <h2>Benvenuto!</h2>
+      <p>Seleziona un argomento dal menu per vedere il contenuto.</p>
+    </div>
+
+    <div id="economia" class="section">
+      <h2>Economia Circolare</h2>
+      <p>Riduce i rifiuti e riutilizza risorse per creare un sistema sostenibile.</p>
+    </div>
+
+    <div id="principi" class="section">
+      <h2>Principi Fondamentali</h2>
+      <p>Libertà, uguaglianza, solidarietà sono alla base della Costituzione italiana.</p>
+    </div>
+
+    <div id="benefici" class="section">
+      <h2>Benefici</h2>
+      <p>Ambiente più pulito, risparmio economico, vita sostenibile.</p>
+    </div>
+
+    <div id="esempi" class="section">
+      <h2>Esempi</h2>
+      <p>Riciclo plastica, compostaggio, riutilizzo oggetti anziché buttarli via.</p>
+    </div>
+
+    <div id="sfide" class="section">
+      <h2>Sfide</h2>
+      <p>Innovazione, cultura del cambiamento, collaborazione tra istituzioni.</p>
+    </div>
+
+    <div id="ue" class="section">
+      <h2>Piano dell’UE</h2>
+      <p>L’Unione Europea punta a emissioni zero e sviluppo sostenibile entro il 2050.</p>
+    </div>
+
+    <div id="italia" class="section">
+      <h2>Piano dell’Italia</h2>
+      <p>Il PNRR sostiene transizione ecologica e innovazione digitale.</p>
+    </div>
+
+    <div id="futuro" class="section">
+      <h2>Futuro</h2>
+      <p>Dipende da scelte responsabili per uno sviluppo sostenibile e inclusivo.</p>
+    </div>
   </div>
 
 </body>
