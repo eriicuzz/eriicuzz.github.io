@@ -1,81 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <title>Sito di educazione civica</title>
+  <meta charset="UTF-8">
+  <title>Sito di Educazione Civica</title>
   <style>
-    ul {
-      list-style-type: none;
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
       margin: 0;
-      padding: 0;
-      width: 200px;
+    }
+    .sidebar {
+      width: 220px;
       background-color: #f1f1f1;
+      height: 100vh;
+      padding-top: 20px;
+      position: fixed;
     }
 
-    li a {
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar li a {
       display: block;
+      padding: 10px 20px;
       color: #000;
-      padding: 8px 16px;
       text-decoration: none;
     }
 
-    li a:hover {
+    .sidebar li a:hover {
       background-color: #555;
-      color: pink;
+      color: white;
+    }
+
+    /* CONTENUTO PRINCIPALE */
+    .content {
+      margin-left: 240px;
+      padding: 20px;
+      flex: 1;
     }
 
     .sezione {
-      margin-top: 40px;
-      padding: 15px;
-      border: 1px solid #ccc;
-      background-color: #f9f9f9;
-      width: 70%;
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: #fafafa;
+      border-left: 4px solid #ccc;
+    }
+
+    .sezione h2 {
+      margin-top: 0;
+      color: #333;
     }
   </style>
-<h1><a style="text-decoration:none;" href="https://eriicuzz.github.io/">⤌</a></h1>
 </head>
 <body>
-  <h1>Sito di educazione civica</h1>
-  <ul>
-    <li><a href="#economia">Economia circolare</a></li>
-    <li><a href="#principi">Principi fondamentali</a></li>
-    <li><a href="#benefici">Benefici</a></li>
-    <li><a href="#esempi">Esempi</a></li>
-    <li><a href="#sfide">Sfide</a></li>
-    <li><a href="#ue">Piano dell’UE</a></li>
-    <li><a href="#italia">Piano dell’Italia</a></li>
-    <li><a href="#futuro">Futuro</a></li>
-  </ul>
-  <div id="economia" class="sezione">
-    <strong>Economia circolare:</strong> L’economia circolare mira a ridurre i rifiuti e riutilizzare le risorse.
+
+ 
+  <div class="sidebar">
+    <ul>
+      <li><a href="#economia">Economia circolare</a></li>
+      <li><a href="#principi">Principi fondamentali</a></li>
+      <li><a href="#benefici">Benefici</a></li>
+      <li><a href="#esempi">Esempi</a></li>
+      <li><a href="#sfide">Sfide</a></li>
+      <li><a href="#ue">Piano dell’UE</a></li>
+      <li><a href="#italia">Piano dell’Italia</a></li>
+      <li><a href="#futuro">Futuro</a></li>
+    </ul>
   </div>
 
-  <div id="principi" class="sezione">
-    <strong>Principi fondamentali:</strong> I principi fondamentali della Costituzione italiana stabiliscono i valori della Repubblica.
+  
+  <div class="content">
+    <h1>Sito di Educazione Civica</h1>
+
+    <div id="economia" class="sezione">
+      <h2>Economia circolare</h2>
+      <p>L’economia circolare mira a ridurre i rifiuti e a riutilizzare le risorse in modo continuo, creando un sistema più sostenibile rispetto al modello lineare tradizionale.</p>
+    </div>
+
+    <div id="principi" class="sezione">
+      <h2>Principi fondamentali</h2>
+      <p>I principi fondamentali della Costituzione Italiana rappresentano le basi su cui si fonda la Repubblica, come la dignità umana, l’uguaglianza, la libertà e la solidarietà.</p>
+    </div>
+
+    <div id="benefici" class="sezione">
+      <h2>Benefici</h2>
+      <p>Adottare pratiche sostenibili porta benefici economici, ambientali e sociali: meno inquinamento, più risparmio e una società più equa e consapevole.</p>
+    </div>
+
+    <div id="esempi" class="sezione">
+      <h2>Esempi</h2>
+      <p>Tra gli esempi di economia circolare troviamo il riciclo della plastica, il compostaggio dei rifiuti organici e il riutilizzo di oggetti anziché gettarli via.</p>
+    </div>
+
+    <div id="sfide" class="sezione">
+      <h2>Sfide</h2>
+      <p>Le sfide principali dell’economia circolare includono la trasformazione culturale, il cambiamento dei modelli di consumo e l’innovazione tecnologica.</p>
+    </div>
+
+    <div id="ue" class="sezione">
+      <h2>Piano dell’UE</h2>
+      <p>L’Unione Europea ha adottato un piano d’azione per l’economia circolare, volto a rendere l’Europa climaticamente neutra e più resiliente entro il 2050.</p>
+    </div>
+
+    <div id="italia" class="sezione">
+      <h2>Piano dell’Italia</h2>
+      <p>Attraverso il Piano Nazionale di Ripresa e Resilienza (PNRR), l’Italia investe in transizione ecologica, economia verde e digitalizzazione.</p>
+    </div>
+
+    <div id="futuro" class="sezione">
+      <h2>Futuro</h2>
+      <p>Il futuro dell’ambiente dipenderà dalle scelte che governi, imprese e cittadini faranno oggi, promuovendo sostenibilità e responsabilità collettiva.</p>
+    </div>
   </div>
 
-  <div id="benefici" class="sezione">
-    <strong>Benefici:</strong> I benefici della sostenibilità includono ambiente più pulito e risparmio economico.
-  </div>
-
-  <div id="esempi" class="sezione">
-    <strong>Esempi:</strong> Esempi di economia circolare includono il riciclo, il riuso e il compostaggio.
-  </div>
-
-  <div id="sfide" class="sezione">
-    <strong>Sfide:</strong> Le principali sfide sono culturali, economiche e tecnologiche.
-  </div>
-
-  <div id="ue" class="sezione">
-    <strong>Piano dell’UE:</strong> L’UE ha un piano ambizioso per raggiungere la neutralità climatica.
-  </div>
-
-  <div id="italia" class="sezione">
-    <strong>Piano dell’Italia:</strong> L’Italia partecipa con il Piano Nazionale di Ripresa e Resilienza.
-  </div>
-
-  <div id="futuro" class="sezione">
-    <strong>Futuro:</strong> Il futuro dipende dalla collaborazione tra governi, imprese e cittadini.
-  </div>
 </body>
 </html>
