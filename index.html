@@ -1,42 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" type="image/x-icon" href="immagini.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sito di Erica Bonalumi</title>
+  <link rel="icon" type="image/x-icon" href="immagini.png">
+  <style>
+    body {
+      background-color: #fff3e6;
+      font-family: Arial, sans-serif;
+      color: #333;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      color: #0073e6;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      color: #666;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      width: 60%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    h3 {
+      margin-top: 40px;
+      color: #cc6600;
+    }
+
+    ul {
+      list-style-position: inside;
+      padding-left: 20px;
+    }
+
+    ul[type="circle"] li::marker {
+      color: #0073e6;
+    }
+
+    ul[type="square"] li::marker {
+      color: #cc6600;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    ul li a:hover {
+      color: #0073e6;
+      font-weight: bold;
+    }
+
+    a:visited {
+      color: #555;
+    }
+
+    a:active {
+      color: red;
+    }
+
+    u {
+      text-decoration-color: #999;
+    }
+  </style>
 </head>
-<body bg color="orange">
-    <h1> <font color="blue">Sito di Erica Bonalumi</font></h1>
-    <h2>ad uso didattico</h2>
-    <img src="https://vitolavecchia.altervista.org/wp-content/uploads/2020/11/Definizione-e-Differenza-tra-struttura-e-layout-di-un-sito-web.png">
-    <h3><u>LINGUAGGIO UTILIZZATO:</u> HTML</h3>
-    <ul type="circle">
-    <li><a href="intestazioni.html">intestazioni</a></li>
-    <li><a href="listaimmagine.html">listaimmagine</a></li>
-    <li><a href="font.html">font</a></li>
-    <li><a href="lista.html">lista</a></li>
-    <li><a href="tabella.html">tabella</a></li>
-    <li><a href="registrazione.html">registrazione</a></li>
-    <li><a href="automobile.html">automobile</a></li>
-    <li><a href="ricetta.html">ricetta</a></li>
-    </ul>
-    <h3><u>LINGUAGGIO UTILIZZATO:</u> CSS</h3>
-    <ul type="square">
-    <li><a href="tabellacss.html">tabella cella colorata</a></li>
-    <li><a href="box.html">box flottanti</a></li>
-    <li><a href="video.html">video</a></li>
-    <li><a href="menutendina.html">menù verticale</a></li>
-    </ul>
-    <h3><u>BOOTSTRAP:</u></h3>
-    <ul type="star">
-    <li><a href="bootstrapage.html">prima pagina di bootstrap</a></li>
-    <li><a href="modal.html">bootstrap</a></li>
-    </ul>
-    <h3><u>SITO DI ALTERVISTA:</u></h3>
-    <ul>
-    <li><a href="https://ericuzz.altervista.org/">clicca il link per visitare il sito</a></li>
-    </ul>
+<body>
+
+  <h1>Sito di Erica Bonalumi</h1>
+  <h2>ad uso didattico</h2>
+
+  <img src="https://vitolavecchia.altervista.org/wp-content/uploads/2020/11/Definizione-e-Differenza-tra-struttura-e-layout-di-un-sito-web.png" alt="Struttura sito web">
+
+  <h3><u>LINGUAGGIO UTILIZZATO:</u> HTML</h3>
+  <ul type="circle">
+    <li><a href="intestazioni.html">Intestazioni</a></li>
+    <li><a href="listaimmagine.html">Lista immagine</a></li>
+    <li><a href="font.html">Font</a></li>
+    <li><a href="lista.html">Lista</a></li>
+    <li><a href="tabella.html">Tabella</a></li>
+    <li><a href="registrazione.html">Registrazione</a></li>
+    <li><a href="automobile.html">Automobile</a></li>
+    <li><a href="ricetta.html">Ricetta</a></li>
+  </ul>
+
+  <h3><u>LINGUAGGIO UTILIZZATO:</u> CSS</h3>
+  <ul type="square">
+    <li><a href="tabellacss.html">Tabella cella colorata</a></li>
+    <li><a href="box.html">Box flottanti</a></li>
+    <li><a href="video.html">Video</a></li>
+    <li><a href="menutendina.html">Menù verticale</a></li>
+  </ul>
+
+  <h3><u>BOOTSTRAP:</u></h3>
+  <ul>
+    <li><a href="bootstrapage.html">Prima pagina di Bootstrap</a></li>
+    <li><a href="modal.html">Bootstrap</a></li>
+  </ul>
+
+  <h3><u>SITO DI ALTERVISTA:</u></h3>
+  <ul>
+    <li><a href="https://ericuzz.altervista.org/" target="_blank">Clicca il link per visitare il sito</a></li>
+  </ul>
 
 </body>
 </html>
