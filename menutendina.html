@@ -1,138 +1,120 @@
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Educazione Civica</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      height: 100vh;
-    }
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-    /* Menu laterale */
-    .sidebar {
-      width: 250px;
-      background-color: #f1f1f1;
-      padding: 20px;
-      overflow-y: auto;
-      border-right: 2px solid #ccc;
-    }
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
 
-    .sidebar a {
-      display: block;
-      padding: 12px;
-      margin-bottom: 8px;
-      background-color: #e0e0e0;
-      text-decoration: none;
-      color: #000;
-      border-radius: 4px;
-    }
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
 
-    .sidebar a:hover {
-      background-color: #bbb;
-    }
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
 
-   
-    .main {
-      flex: 1;
-      padding: 30px;
-      overflow-y: auto;
-    }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
-    .section {
-      display: none;
-    }
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
 
-    
-    .section:target {
-      display: block;
-    }
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
-   
-    .section.default {
-      display: block;
-    }
-
-    h2 {
-      margin-top: 0;
-      color: #333;
-    }
-
-    .section p {
-      background-color: #f9f9f9;
-      padding: 15px;
-      border-left: 4px solid #ccc;
-    }
-  </style>
+.show {
+  display: block;
+}
+</style>
 </head>
-<body>
+<body style="background-color:white;">
 
-  
-  <div class="sidebar">
-    <h3>Educazione Civica</h3>
-    <a href="#economia">Economia Circolare</a>
-    <a href="#principi">Principi Fondamentali</a>
-    <a href="#benefici">Benefici</a>
-    <a href="#esempi">Esempi</a>
-    <a href="#sfide">Sfide</a>
-    <a href="#ue">Piano dell’UE</a>
-    <a href="#italia">Piano dell’Italia</a>
-    <a href="#futuro">Futuro</a>
-  </div>
+<div class="navbar">
+  <a href="#home">Economia circolare</a>
+  <a href="#news">Principi fondamentali</a>
 
-  
-  <div class="main">
-    <div class="section default">
-      <h2>Benvenuto!</h2>
-      <p>Seleziona un argomento dal menu per vedere il contenuto.</p>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="toggleDropdown(event, 'dropdown1')">Che cos'è l'economia circolare?
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="dropdown1">
+      <a href="https://ericuzz.altervista.org/">L'economia circolare?</a>
+      <a href="https://ericuzz.altervista.org/principi-fondamentali-delleconomia-circolare/">Principi fondamentali</a>
+      <a href="https://ericuzz.altervista.org/benefici-delleconomia-circolare/">Benefici</a>
+      <a href="https://ericuzz.altervista.org/esempi/">Esempi</a>
+      <a href="https://ericuzz.altervista.org/sfide/">Sfide</a>
+      <a href="https://ericuzz.altervista.org/piano-dellue/">Piano dell'UE</a>
+      <a href="https://ericuzz.altervista.org/piano-dellitalia/">Piano dell'Italia</a>
+      <a href="https://ericuzz.altervista.org/futuro/">Piano dell'Italia</a>
+     
     </div>
+  </div> 
 
-    <div id="economia" class="section">
-      <h2>Economia Circolare</h2>
-      <p>Riduce i rifiuti e riutilizza risorse per creare un sistema sostenibile.</p>
-    </div>
+ 
 
-    <div id="principi" class="section">
-      <h2>Principi Fondamentali</h2>
-      <p>Libertà, uguaglianza, solidarietà sono alla base della Costituzione italiana.</p>
-    </div>
+<h3>Dropdown Menu inside a Navigation Bar</h3>
+<p>Click on the "Dropdown" link to see the dropdown menu.</p>
 
-    <div id="benefici" class="section">
-      <h2>Benefici</h2>
-      <p>Ambiente più pulito, risparmio economico, vita sostenibile.</p>
-    </div>
+<script>
+function toggleDropdown(event, id) {
+  event.stopPropagation();
+  closeAllDropdowns();
+  document.getElementById(id).classList.toggle("show");
+}
 
-    <div id="esempi" class="section">
-      <h2>Esempi</h2>
-      <p>Riciclo plastica, compostaggio, riutilizzo oggetti anziché buttarli via.</p>
-    </div>
+function closeAllDropdowns() {
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  for (var i = 0; i < dropdowns.length; i++) {
+    dropdowns[i].classList.remove('show');
+  }
+}
 
-    <div id="sfide" class="section">
-      <h2>Sfide</h2>
-      <p>Innovazione, cultura del cambiamento, collaborazione tra istituzioni.</p>
-    </div>
-
-    <div id="ue" class="section">
-      <h2>Piano dell’UE</h2>
-      <p>L’Unione Europea punta a emissioni zero e sviluppo sostenibile entro il 2050.</p>
-    </div>
-
-    <div id="italia" class="section">
-      <h2>Piano dell’Italia</h2>
-      <p>Il PNRR sostiene transizione ecologica e innovazione digitale.</p>
-    </div>
-
-    <div id="futuro" class="section">
-      <h2>Futuro</h2>
-      <p>Dipende da scelte responsabili per uno sviluppo sostenibile e inclusivo.</p>
-    </div>
-  </div>
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    closeAllDropdowns();
+  }
+}
+</script>
 
 </body>
 </html>
