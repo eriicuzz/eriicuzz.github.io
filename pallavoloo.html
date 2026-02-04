@@ -4,12 +4,209 @@
     <meta charset="UTF-8">
     <title>Management Portal | Allianz Powervolley Milano</title>
     <style>
+        :root {
+            --blue-900: #0b1f3a;
+            --blue-700: #143a6e;
+            --blue-500: #2d63b8;
+            --blue-100: #e7f0ff;
+            --white: #ffffff;
+            --gray-100: #f7f9fc;
+            --gray-300: #e1e8f2;
+            --text: #0d1b2a;
+            --accent: #1f6feb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+            background: var(--gray-100);
+            color: var(--text);
+        }
+
+        #login-overlay {
+            background: linear-gradient(120deg, var(--blue-900), var(--blue-700));
+            padding: 24px 0;
+        }
+
+        .login-box {
+            width: min(520px, 92%);
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            box-shadow: 0 10px 30px rgba(11, 31, 58, 0.15);
+        }
+
+        .login-box h2 {
+            margin: 0;
+            font-size: 18px;
+            color: var(--blue-700);
+        }
+
+        .login-box input {
+            flex: 1;
+            padding: 10px 12px;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+        }
+
+        .btn-sec {
+            background: var(--blue-500);
+            color: var(--white);
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        #main-content {
+            width: min(1200px, 92%);
+            margin: 24px auto 48px;
+        }
+
+        header h1 {
+            margin: 0 0 16px;
+            color: var(--blue-900);
+        }
+
+        .sub-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .panel {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 10px 24px rgba(13, 27, 42, 0.08);
+            border: 1px solid var(--gray-300);
+        }
+
+        .panel h3 {
+            margin: 0 0 16px;
+            color: var(--blue-700);
+        }
+
+        .player-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .player-card {
+            background: var(--blue-100);
+            border-radius: 16px;
+            padding: 14px;
+            display: grid;
+            gap: 10px;
+            border: 1px solid #d6e3ff;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.7);
+        }
+
         .player-photo {
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-            border-radius: 50%;
-            display: block;
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            background: var(--white);
+            border-radius: 14px;
+            padding: 8px;
+            border: 1px solid var(--gray-300);
+        }
+
+        .player-info h3 {
+            margin: 0;
+            font-size: 16px;
+            color: var(--blue-900);
+        }
+
+        .player-info p {
+            margin: 4px 0 8px;
+            color: var(--blue-700);
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--blue-500);
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+        }
+
+        table td {
+            padding: 10px;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .next-match {
+            background: var(--blue-100);
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 16px;
+            border-radius: 16px;
+            border: 1px solid var(--gray-300);
+            box-shadow: 0 10px 24px rgba(13, 27, 42, 0.08);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: var(--blue-700);
+        }
+
+        .card input,
+        .card select {
+            width: 100%;
+            margin: 8px 0 12px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--gray-300);
+        }
+
+        .btn-coach, .btn-med, .btn-export {
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .btn-export {
+            margin-top: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .sub-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
