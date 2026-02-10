@@ -27,12 +27,12 @@
             color: var(--text);
         }
 
-        #login-overlay {
+        #uno {
             background: linear-gradient(120deg, var(--blue-900), var(--blue-700));
             padding: 24px 0;
         }
 
-        .login-box {
+        .due {
             width: min(520px, 92%);
             margin: 0 auto;
             background: var(--white);
@@ -44,20 +44,20 @@
             box-shadow: 0 10px 30px rgba(11, 31, 58, 0.15);
         }
 
-        .login-box h2 {
+        .due h2 {
             margin: 0;
             font-size: 18px;
             color: var(--blue-700);
         }
 
-        .login-box input {
+        .due input {
             flex: 1;
             padding: 10px 12px;
             border: 1px solid var(--gray-300);
             border-radius: 8px;
         }
 
-        .btn-sec {
+        .tre {
             background: var(--blue-500);
             color: var(--white);
             border: none;
@@ -67,7 +67,7 @@
             font-weight: 600;
         }
 
-        #main-content {
+        #contenuto {
             width: min(1200px, 92%);
             margin: 24px auto 48px;
         }
@@ -77,13 +77,13 @@
             color: var(--blue-900);
         }
 
-        .sub-grid {
+        .quattro {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 20px;
         }
 
-        .panel {
+        .riquadro {
             background: var(--white);
             border-radius: 16px;
             padding: 18px;
@@ -91,18 +91,18 @@
             border: 1px solid var(--gray-300);
         }
 
-        .panel h3 {
+        .riquadro h3 {
             margin: 0 0 16px;
             color: var(--blue-700);
         }
 
-        .player-list {
+        .lista-giocatori {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 16px;
         }
 
-        .player-card {
+        .carta-giocatori {
             background: var(--blue-100);
             border-radius: 16px;
             padding: 14px;
@@ -112,7 +112,7 @@
             box-shadow: inset 0 0 0 1px rgba(255,255,255,0.7);
         }
 
-        .player-photo {
+        .foto-giocatori {
             width: 100%;
             height: 180px;
             object-fit: contain;
@@ -122,13 +122,13 @@
             border: 1px solid var(--gray-300);
         }
 
-        .player-info h3 {
+        .informazioni-giocatore h3 {
             margin: 0;
             font-size: 16px;
             color: var(--blue-900);
         }
 
-        .player-info p {
+        .informazioni-giocatore p {
             margin: 4px 0 8px;
             color: var(--blue-700);
             font-weight: 600;
@@ -160,7 +160,7 @@
             font-weight: 600;
         }
 
-        .grid {
+        .cinque {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 16px;
@@ -189,7 +189,7 @@
             border: 1px solid var(--gray-300);
         }
 
-        .btn-coach, .btn-med, .btn-export {
+        .due-coach, .due-med, .due-export {
             background: var(--accent);
             color: var(--white);
             border: none;
@@ -199,12 +199,12 @@
             font-weight: 600;
         }
 
-        .btn-export {
+        .due-export {
             margin-top: 12px;
         }
 
         @media (max-width: 900px) {
-            .sub-grid {
+            .sub-cinque {
                 grid-template-columns: 1fr;
             }
         }
@@ -212,122 +212,122 @@
 </head>
 <body>
 
-<div id="login-overlay">
-    <div class="login-box">
+<div id="uno">
+    <div class="due">
         <h2>Area Staff Allianz Milano</h2>
         <input type="password" id="pass" placeholder="Password">
-        <button class="btn-sec">ACCEDI</button>
+        <button class="tre">ACCEDI</button>
     </div>
 </div>
 
-<div id="main-content">
+<div id="tre">
     <header>
         <h1>Allianz Powervolley Milano</h1>
     </header>
 
-    <div class="sub-grid">
-        <div class="panel">
+    <div class="quattro">
+        <div class="riquadro">
             <h3>Squadra 25/26</h3>
-            <div class="player-list">
-                <div class="player-card">
-                    <img class="player-photo" src="https://pbs.twimg.com/profile_images/654441614648176641/-O8uKtxD_400x400.jpg" alt="Matteo Piano">
-                    <div class="player-info">
+            <div class="lista-giocatori">
+                <div class="carta-giocatori">
+                    <img class="foto-giocatori" src="https://pbs.twimg.com/profile_images/654441614648176641/-O8uKtxD_400x400.jpg" alt="Matteo Piano">
+                    <div class="informazioni-giocatore">
                         <h3>Matteo Piano</h3>
                         <p>Centrale</p>
                         
                     </div>
                 </div>
-                <div class="player-card">
-                    <img class="player-photo" src="https://www.gassalespiacenza.it/wp-content/uploads/2025/08/Paolo-Porro-03-scaled.png" alt="Paolo Porro">
-                    <div class="player-info">
+                <div class="carta-giocatori">
+                    <img class="foto-giocatori" src="https://www.gassalespiacenza.it/wp-content/uploads/2025/08/Paolo-Porro-03-scaled.png" alt="Paolo Porro">
+                    <div class="informazioni-giocatore">
                         <h3>Paolo Porro</h3>
                         <p>Palleggiatore</p>
                         
                     </div>
                 </div>
-                <div class="player-card">
-                    <img class="player-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3pKattCrN9kG3xp-l3g6LOJGF7oPs8LVdLQ&s" alt="Yacine Louati">
-                    <div class="player-info">
+                <div class="carta-giocatori">
+                    <img class="foto-giocatori" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3pKattCrN9kG3xp-l3g6LOJGF7oPs8LVdLQ&s" alt="Yacine Louati">
+                    <div class="informazioni-giocatore">
                         <h3>Yacine Louati</h3>
                         <p>Schiacciatore</p>
                         
                     </div>
                 </div>
-                <div class="player-card">
-                    <img class="player-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShDYLNjQshgVg-6LGAVVXizcb7DbOmWhLl4g&s" alt="Davide Gardini">
-                    <div class="player-info">
+                <div class="carta-giocatori">
+                    <img class="foto-giocatori" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShDYLNjQshgVg-6LGAVVXizcb7DbOmWhLl4g&s" alt="Davide Gardini">
+                    <div class="informazioni-giocatore">
                         <h3>Davide Gardini</h3>
                         <p>Schiacciatore</p>
                         
                     </div>
                 </div>
-                <div class="player-card">
-                    <img class="player-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YKWe3C_eAD8avltTq3mnFokQRcDYm92hJg&s" alt="Tatsunori Otsuka">
-                    <div class="player-info">
+                <div class="carta-giocatori">
+                    <img class="foto-giocatori" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YKWe3C_eAD8avltTq3mnFokQRcDYm92hJg&s" alt="Tatsunori Otsuka">
+                    <div class="informazioni-giocatore">
                         <h3>Tatsunori Otsuka</h3>
                         <p>Schiacciatore</p>
                         
                     </div>
                 </div>
-                <div class="player-card">
-                    <img class="player-photo" src="https://www.powervolleymilano.it/img/tel_min/1761735038-0.png" alt="Francesco Recine">
-                    <div class="player-info">
+                <div class="carta-giocatori">
+                    <img class="foto-giocatori" src="https://www.powervolleymilano.it/img/tel_min/1761735038-0.png" alt="Francesco Recine">
+                    <div class="informazioni-giocatore">
                         <h3>Francesco Recine</h3>
                         <p>Schiacciatore</p>
                         
                     </div>
                 </div>
-                <div class="player-card">
-                    <img class="player-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSobXOY_g-sY-ej4Rg7I4D5V147Un43DQMfNg&s" alt="Tommaso Barotto">
-                    <div class="player-info">
+                <div class="carta-giocatori">
+                    <img class="foto-giocatori" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSobXOY_g-sY-ej4Rg7I4D5V147Un43DQMfNg&s" alt="Tommaso Barotto">
+                    <div class="informazioni-giocatore">
                         <h3>Tommaso Barotto</h3>
                         <p>Opposto</p>
                         
                     </div>
                 </div>
-                <div class="player-card">
-                    <img class="player-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXcuJ9VbQGHPEY5dv1gT-SPP2nK_iJA6tPwg&s" alt="Nicola Zonta">
-                    <div class="player-info">
+                <div class="carta-giocatori">
+                    <img class="foto-giocatori" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXcuJ9VbQGHPEY5dv1gT-SPP2nK_iJA6tPwg&s" alt="Nicola Zonta">
+                    <div class="informazioni-giocatore">
                         <h3>Nicola Zonta</h3>
                         <p>Palleggiatore</p>
                         
                     </div>
                 </div>
-                <div class="player-card">
-                    <img class="player-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK7XOBdV2ACbdr6VvEBL7kladNoTr7XmQNmQ&s" alt="Matteo Staforini">
-                    <div class="player-info">
+                <div class="carta-giocatori">
+                    <img class="foto-giocatori" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK7XOBdV2ACbdr6VvEBL7kladNoTr7XmQNmQ&s" alt="Matteo Staforini">
+                    <div class="informazioni-giocatore">
                         <h3>Matteo Staforini</h3>
                         <p>Libero</p>
                         
                     </div>
                 </div>
-                <div class="player-card">
-                    <img class="player-photo" src="https://www.powervolleymilano.it/img/tel_max/1761734835-0.png" alt="Damiano Catania">
-                    <div class="player-info">
+                <div class="carta-giocatori">
+                    <img class="foto-giocatori" src="https://www.powervolleymilano.it/img/tel_max/1761734835-0.png" alt="Damiano Catania">
+                    <div class="informazioni-giocatore">
                         <h3>Damiano Catania</h3>
                         <p>Libero</p>
                         
                     </div>
                 </div>
-                <div class="player-card">
-                    <img class="player-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0jgS69apDMSMQtSD1mAo868zLBJknpxexpg&s" alt="Jordan Schnitzer">
-                    <div class="player-info">
+                <div class="carta-giocatori">
+                    <img class="foto-giocatori" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0jgS69apDMSMQtSD1mAo868zLBJknpxexpg&s" alt="Jordan Schnitzer">
+                    <div class="informazioni-giocatore">
                         <h3>Jordan Schnitzer</h3>
                         <p>Centrale</p>
                         
                     </div>
                 </div>
-                <div class="player-card">
-                    <img class="player-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVcY0zW2SPS7VbLOkboKo1RcHrKqRUYg7A6Q&s" alt="Jacopo Larizza">
-                    <div class="player-info">
+                <div class="carta-giocatori">
+                    <img class="foto-giocatori" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVcY0zW2SPS7VbLOkboKo1RcHrKqRUYg7A6Q&s" alt="Jacopo Larizza">
+                    <div class="informazioni-giocatore">
                         <h3>Jacopo Larizza</h3>
                         <p>Centrale</p>
                         
                     </div>
                 </div>
-                <div class="player-card">
-                    <img class="player-photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxKpKLVHK7I1JOAkcOySLK9HKzTZWlhjgwDg&s" alt="Edoardo Caneschi">
-                    <div class="player-info">
+                <div class="carta-giocatori">
+                    <img class="foto-giocatori" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxKpKLVHK7I1JOAkcOySLK9HKzTZWlhjgwDg&s" alt="Edoardo Caneschi">
+                    <div class="informazioni-giocatore">
                         <h3>Edoardo Caneschi</h3>
                         <p>Centrale</p>
                         
@@ -335,7 +335,7 @@
                 </div>
             </div>
         </div>
-        <div class="panel">
+        <div class="riquadro">
             <h3>Calendario</h3>
             <table>
                 <tr class="next-match"><td>01 Feb</td><td>Modena - MILANO</td></tr>
@@ -346,7 +346,7 @@
         </div>
     </div>
 
-    <div class="grid">
+    <div class="cinque">
         <div class="card coach">
             <h2>Convocazioni</h2>
             <label>Partita</label>
@@ -385,8 +385,8 @@
         <div class="card secretary">
             <h2>Iscrizione</h2>
             <p><strong>Quota da pagare:</strong> Versare la tassa annuale</p>
-            <input type="number" id="s_rimb" placeholder="Importo Rimborso €">
-            <button class="btn-sec">PAGA RIMBORSO</button>
+            <input type="number" id="rimborso" placeholder="Importo Rimborso €">
+            <button class="tre">PAGA RIMBORSO</button>
         </div>
     </div>
 </div>
