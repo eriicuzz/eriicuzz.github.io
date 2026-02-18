@@ -7,10 +7,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/latest/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .report-header { background: #0047ab; color: white; padding: 60px 0; margin-bottom: 40px; border-bottom: 5px solid #002d6b; }
+        .report-header { background: linear-gradient(to right, #0047ab, #007bff); color: white; padding: 60px 0; margin-bottom: 40px; border-bottom: 5px solid #002d6b; }
         .section-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 30px; border-left: 5px solid #0047ab; }
         h2 { color: #0047ab; font-weight: bold; margin-bottom: 20px; }
+        h3 { color: #0056b3; margin-top: 25px; margin-bottom: 15px; font-weight: 600; }
         .highlight { color: #d63384; font-weight: 600; }
+        .question-box { background: #e0f7fa; border-left: 4px solid #00bcd4; padding: 15px; margin-bottom: 20px; border-radius: 8px; }
+        .quote-bubble {
+            position: relative;
+            background: #e9ecef;
+            border-radius: .4em;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 80%;
+            font-style: italic;
+            color: #343a40;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .quote-bubble:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 15px solid transparent;
+            border-top-color: #e9ecef;
+            border-bottom: 0;
+            margin-left: -15px;
+            margin-bottom: -15px;
+        }
+        .report-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
         footer { background: #343a40; color: white; padding: 20px 0; margin-top: 50px; }
     </style>
 </head>
@@ -18,8 +52,8 @@
 
     <header class="report-header text-center">
         <div class="container">
-            <h1 class="display-4">Student Interview Report</h1>
-            <p class="lead">Insights from the Chemistry and Biotechnology Department</p>
+            <h1 class="display-3">Student Interview Report: <br>Life in the Chemistry & Biotech Department</h1>
+            <p class="lead">Insights from a Group of Three High School Students</p>
         </div>
     </header>
 
@@ -28,31 +62,74 @@
             <div class="col-lg-10 mx-auto">
 
                 <section class="section-card">
+                    <h2>Interview Questions</h2>
+                    <p>Before diving into their detailed responses, let's review the questions posed to the three students:</p>
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item question-box">Why did you choose the chemistry track five years ago?</li>
+                        <li class="list-group-item question-box">What was the most difficult part of these five years?</li>
+                        <li class="list-group-item question-box">How would you describe the atmosphere in your class?</li>
+                        <li class="list-group-item question-box">Is there a particular memory or funny anecdote you'll take with you?</li>
+                        <li class="list-group-item question-box">How much time do you spend in the lab each week?</li>
+                        <li class="list-group-item question-box">What is the most interesting experiment you have ever done?</li>
+                        <li class="list-group-item question-box">What is the golden rule for safety in your lab?</li>
+                        <li class="list-group-item question-box">What will you miss most about practical work after graduation?</li>
+                        <li class="list-group-item question-box">How do you feel about the subjects chosen for the second written exam?</li>
+                        <li class="list-group-item question-box">Are you worried about having external examiners this year?</li>
+                        <li class="list-group-item question-box">How are you preparing for the multidisciplinary oral exam?</li>
+                        <li class="list-group-item question-box">What do you think of the recent changes made by the Ministry to the exam structure?</li>
+                        <li class="list-group-item question-box">What subject are you most afraid to face before the commission?</li>
+                        <li class="list-group-item question-box">What are your plans after graduation? University or work?</li>
+                        <li class="list-group-item question-box">Do you think this school has prepared you well for the "real world"?</li>
+                        <li class="list-group-item question-box">Would you recommend this course to a middle school student? Why?</li>
+                    </ul>
+                </section>
+
+                <section class="section-card">
                     <h2>1. Academic Background and Motivation</h2>
                     <p>The three students explained that they <strong>had chosen</strong> the chemistry track five years prior because they <strong>had all become</strong> fascinated by the laboratories during an open day. They mentioned that seeing the practical applications of science <strong>had convinced</strong> them immediately that it was the right choice for their future.</p>
+                    <div class="quote-bubble">
+                        "Seeing the practical side of science truly convinced us to choose this path!"
+                    </div>
+                    
                 </section>
 
                 <section class="section-card">
                     <h2>2. Challenges and School Atmosphere</h2>
                     <p>Regarding their struggles, they stated that the hardest part <strong>had been</strong> managing their time effectively between a demanding study schedule and their sports training. </p>
+                    <div class="quote-bubble">
+                        "Balancing demanding studies with sports training was definitely the toughest part."
+                    </div>
                     <p>When asked about the atmosphere in their class, they admitted they <span class="highlight">did not like it very much</span>, describing it as fragmented and divided into small groups rather than being a united team.</p>
+                    <img src="https://image.pollinations.ai/prompt/Three students looking stressed while studying next to sports equipment, symbolizing the difficulty of balancing demanding studies with sports training." alt="Students balancing studies and sports" class="img-fluid report-img">
                 </section>
 
                 <section class="section-card">
                     <h2>3. Laboratory Experience</h2>
                     <p>They recalled a fun anecdote from when they <strong>had spent</strong> a day digging in the school garden to collect soil samples, calling it a refreshing break from routine. </p>
+                    <div class="quote-bubble">
+                        "Digging in the school garden for soil samples was a surprisingly fun and different day!"
+                    </div>
+                    
                     <p>The students explained that they spend <strong>10 hours a week</strong> in the lab, focusing on biology, analytical chemistry, and organic chemistry. Their favorite experiments included searching for bacteria and the <strong>saponification process</strong> (making soap).</p>
+                    <img src="https://image.pollinations.ai/prompt/Three high school students in a chemistry lab, wearing lab coats and safety glasses, actively performing an experiment with beakers and test tubes. One student is looking through a microscope, another is mixing chemicals, and the third is observing a reaction under a fume hood. The lab is clean and well-lit." alt="Students in a chemistry lab" class="img-fluid report-img">
                 </section>
 
                 <section class="section-card">
                     <h2>4. Safety and Graduation Exams</h2>
                     <p>Safety is a priority: they emphasized that the "golden rules" <strong>were</strong> the constant use of lab coats, goggles, and gloves, always working under a fume hood.</p>
+                    <div class="quote-bubble">
+                        "Lab coats, goggles, gloves, and working under the fume hood – those are non-negotiable for safety!"
+                    </div>
                     <p>Regarding the <em>Maturità</em>, they expressed disappointment that <strong>Analytical Chemistry</strong> was chosen for the written exam instead of Biology, but they claimed they <strong>were not worried</strong> about facing external examiners.</p>
                 </section>
 
                 <section class="section-card">
                     <h2>5. Future Aspirations</h2>
                     <p>The students confirmed they <strong>were preparing</strong> diligently for the oral interview. Looking ahead, they said they <strong>would be taking</strong> the TOLC exams soon. All three <strong>had decided</strong> to study <span class="highlight">Biotechnology</span> at university, believing that seeing science in action makes learning more intuitive.</p>
+                    <div class="quote-bubble">
+                        "We're all set to pursue Biotechnology in university; seeing science in action truly makes learning click."
+                    </div>
+                    <img src="https://image.pollinations.ai/prompt/Three young women looking excitedly at a university campus building, possibly a science faculty, with backpacks, symbolizing their aspiration to study biotechnology after high school. They are smiling and appear determined." alt="Students looking forward to university" class="img-fluid report-img">
                 </section>
 
             </div>
