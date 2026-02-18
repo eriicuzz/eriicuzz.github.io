@@ -3,153 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemistry Hub - Reported Speech Project</title>
+    <title>Chemistry Insights</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/latest/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { 
-            --primary: #0047ab; 
-            --secondary: #00d2ff; 
-            --accent: #ff007f;
-            --glass: rgba(255, 255, 255, 0.9);
-        }
-        
+        /* Sfondo e Colori */
         body { 
-            background-color: #f0f4f8; 
-            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); /* Decoro trama molecolare */
-            font-family: 'Poppins', sans-serif; 
-            color: #2c3e50; 
+            background-color: #0b0e14; 
+            color: #e0e6ed; 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
         }
 
-        .hero { 
-            background: linear-gradient(135deg, var(--primary), var(--secondary)); 
-            color: white; 
-            padding: 100px 0; 
-            border-bottom: 10px solid var(--accent);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            position: relative;
-            overflow: hidden;
-        }
+        .container { max-width: 800px; padding: 40px 20px; }
 
-        /* Icone fluttuanti di decoro */
-        .flask-icon { position: absolute; font-size: 5rem; opacity: 0.1; animation: float 6s ease-in-out infinite; }
-        @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0); } }
-
-        .section-card { 
-            background: var(--glass); 
-            backdrop-filter: blur(10px);
-            padding: 40px; 
-            border-radius: 30px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
-            margin-bottom: 60px; 
-            border: 2px solid white;
-        }
-
-        h2 { 
-            color: var(--primary); 
-            font-weight: 900; 
+        /* Titolo Principale */
+        h1 { 
+            font-weight: 800; 
+            font-size: 2.5rem; 
+            background: linear-gradient(to right, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 50px;
             text-align: center;
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
         }
 
-        .question-item { 
-            background: white; 
-            padding: 12px 20px; 
-            border-radius: 12px; 
-            margin-bottom: 10px; 
-            border-right: 4px solid var(--secondary);
-            font-size: 0.9rem;
-            list-style: none;
+        /* Sezione Domande (Molto compatta) */
+        .questions-summary {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 60px;
+            font-size: 0.85rem;
+            color: #8892b0;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Titoli Sezioni */
+        h2 { 
+            font-size: 1.1rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            color: #00d2ff; 
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(0,210,255,0.2);
+            padding-bottom: 10px;
+        }
+
+        /* La Nuvoletta (Speech Bubble) Minimal */
+        .speech-bubble {
+            background: #1a1f29;
+            border-radius: 20px 20px 20px 0;
+            padding: 25px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-left: 4px solid #3a7bd5;
+            font-size: 1.15rem;
+            font-style: italic;
+            position: relative;
+        }
+
+        /* Immagini stilizzate */
+        .img-container {
+            width: 100%;
+            margin-bottom: 60px;
+            border-radius: 15px;
+            overflow: hidden;
+            opacity: 0.8;
             transition: 0.3s;
         }
-        .question-item:hover { transform: translateX(10px); border-right-color: var(--accent); }
+        .img-container:hover { opacity: 1; }
+        .img-container img { width: 100%; height: auto; display: block; }
 
-        /* Speech Bubbles Avanzate */
-        .bubble-container { position: relative; padding: 20px; }
-        .speech-bubble {
-            position: relative;
-            background: white;
-            color: var(--primary);
-            border: 3px solid var(--primary);
-            border-radius: 25px;
-            padding: 30px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            text-align: center;
-            box-shadow: 10px 10px 0px var(--secondary);
-        }
-        .speech-bubble::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            border-width: 20px 20px 0;
-            border-style: solid;
-            border-color: var(--primary) transparent;
-            display: block;
-            width: 0;
-        }
-
-        .report-img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 20px;
-            margin: 40px 0;
-            border: 5px solid white;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-
-        footer { background: var(--primary); color: white; padding: 30px; margin-top: 100px; }
+        footer { text-align: center; color: #444; margin-top: 100px; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
-    <header class="hero text-center">
-        <i class="fas fa-flask flask-icon" style="top: 10%; left: 5%;"></i>
-        <i class="fas fa-dna flask-icon" style="top: 50%; right: 5%;"></i>
-        <i class="fas fa-atom flask-icon" style="bottom: 10%; left: 20%;"></i>
-        <div class="container">
-            <h1 class="display-3 fw-bold"><i class="fas fa-microscope"></i> REPORTED SPEECH PROJECT</h1>
-            <p class="lead fw-light">A Deep Dive into the Chemistry World through Students' Eyes</p>
+<div class="container">
+    <h1>Lab Life Report.</h1>
+
+    <div class="questions-summary">
+        <strong>The Discussion Covered:</strong> 
+        5-year journey, study-sports balance, class atmosphere, soil sampling anecdote, 10 hours of lab/week, safety rules, exam fears, and the future in Biotechnology.
+    </div>
+
+    <section>
+        <h2>The Motivation</h2>
+        <div class="speech-bubble">
+            "They stated that they had chosen this specific track because they had become fascinated by the laboratory work during an open day."
         </div>
-    </header>
+        <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1532187875605-1ef6c237f142?auto=format&fit=crop&w=800&q=80" alt="Laboratory">
+        </div>
+    </section>
 
-    <main class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
+    <section>
+        <h2>Challenges & Atmosphere</h2>
+        <div class="speech-bubble">
+            "They mentioned that the hardest part had been organizing their schedule between sports and studies, while the class remained divided in groups."
+        </div>
+    </section>
 
-                <section class="section-card">
-                    <h2><i class="fas fa-clipboard-list"></i> The Interview Questions</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="ps-0">
-                                <li class="question-item">Why did you choose chemistry 5 years ago?</li>
-                                <li class="question-item">What was the most difficult part?</li>
-                                <li class="question-item">How is the class atmosphere?</li>
-                                <li class="question-item">Any funny memories?</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="ps-0">
-                                <li class="question-item">Tell us about safety rules.</li>
-                                <li class="question-item">What are your plans for the future?</li>
-                                <li class="question-item">How do you feel about the final exams?</li>
-                                <li class="question-item">Would you recommend this course?</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
+    <section>
+        <h2>Memories & Practice</h2>
+        <div class="speech-bubble">
+            "They recalled that digging for soil samples was their funniest memory, and they spent 10 hours a week researching bacteria and making soap."
+        </div>
+        <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&q=80" alt="Biotech Research">
+        </div>
+    </section>
 
-                <section class="section-card">
-                    <h2><i class="fas fa-vial"></i> 1. The Passion for Science</h2>
-                    <div class="bubble-container">
-                        <div class="speech-bubble">
-                            "The three students stated that they had chosen this path because they had been fascinated by the lab during an open day."
-                        </div>
-                    </div>
-                    <img src="
+    <section>
+        <h2>Final Exams</h2>
+        <div class="speech-bubble">
+            "They explained that they were a bit disappointed about Analytical Chemistry being chosen, but they felt prepared for the external examiners."
+        </div>
+    </section>
+
+    <section>
+        <h2>The Next Step</h2>
+        <div class="speech-bubble">
+            "They confirmed that they would pursue Biotechnology at university because seeing science in action makes learning intuitive."
+        </div>
+        <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=800&q=80" alt="Modern Science">
+        </div>
+    </section>
+
+    <footer>
+        English Project • Reported Speech Analysis • 2026
+    </footer>
+</div>
+
+</body>
+</html>
